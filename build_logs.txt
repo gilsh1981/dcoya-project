@@ -1,0 +1,42 @@
+mysql uses an image, skipping
+Building app
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  8.704kB
+Step 1/7 : FROM ubuntu:latest
+ ---> 17c0145030df
+Step 2/7 : RUN apt-get update && apt-get install -y python3 python3-pip mysql-client
+ ---> Using cache
+ ---> 612a96a6b6bd
+Step 3/7 : COPY . /app
+ ---> Using cache
+ ---> 3a7f84e4f317
+Step 4/7 : WORKDIR /app
+ ---> Using cache
+ ---> 67a16ea98a3b
+Step 5/7 : RUN pip3 install mysql-connector-python flask
+ ---> Running in 3b8681143094
+[91merror: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.12/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+[0mThe command '/bin/sh -c pip3 install mysql-connector-python flask' returned a non-zero code: 1
+Service 'app' failed to build : Build failed
