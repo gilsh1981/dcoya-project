@@ -1,5 +1,5 @@
 
-Overview
+Overview:
 This project is a submission for the Dcoya Integration Challenge 2024. The goal of the challenge is to deploy a web application in clients' on-premise environments, ensuring the app is fully usable. The application consists of two main components: a MySQL database and a web application, both running in Docker containers.
 
 Prerequisites: Setting Up Docker and Docker Compose
